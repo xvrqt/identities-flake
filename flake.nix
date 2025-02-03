@@ -20,7 +20,7 @@
               # User file itself
               (import ./crow { inherit lib pkgs config agenix userInfo; })
               # All users should import this
-              (import ./common.nix { inherit pkgs agenix; })
+              (import ./common.nix { inherit pkgs agenix userInfo; })
               # Needed for secret keeping
               agenix.nixosModules.default
             ];
