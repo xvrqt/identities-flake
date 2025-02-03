@@ -4,11 +4,6 @@ let
   allPublicKeys = lib.attrsets.mapAttrsToList (_: value: value.ssh.publicKey) userInfo;
 in
 {
-  # Enable SSH
-  services = {
-    openssh.enable = true;
-  };
-
   # Allow this user to be logged in by all users
   users.users."${user.name}".openssh.authorizedKeys.keys = allPublicKeys;
 
