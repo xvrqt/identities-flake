@@ -8,7 +8,8 @@
     # Start user services at boot, not at login
     linger = true;
     # Enable 'sudo' for the user
-    extraGroups = [ "wheel" ];
+    # Add the groups that are used by the 'arr' stack for convenience
+    extraGroups = [ "wheel" "pirates" "media-players" ];
     # i.e. is *not* a daemon wearing human skin
     isNormalUser = true;
 
