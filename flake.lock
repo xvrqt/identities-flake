@@ -109,11 +109,11 @@
         "agenix": "agenix"
       },
       "locked": {
-        "lastModified": 1738865245,
-        "narHash": "sha256-ETBoS+Zz9OvxFiF+jkaHSIx9Jz8eADTqJBWom/ccx6Y=",
+        "lastModified": 1738865467,
+        "narHash": "sha256-FKhZTDlnf5Tg4MEY44uRAQtVTNAqpahWC8t0sLcs+tQ=",
         "ref": "refs/heads/master",
-        "rev": "c8c4e63675c34cea5af5ec67fc42aae1261da8f7",
-        "revCount": 7,
+        "rev": "f5b85718ca61bd09df6430b7955572eb2c4476f4",
+        "revCount": 8,
         "type": "git",
         "url": "file:///home/crow/dev/secrets-flake"
       },
