@@ -1,4 +1,4 @@
-{ lib, config, user, ... }:
+{ lib, user, config, ... }:
 let
   # If this identity is enabled
   identityEnabled = config.identities.${user.name}.enable;

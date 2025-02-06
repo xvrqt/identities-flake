@@ -14,7 +14,7 @@ in
     # Setup NixOS user
     (import ./user.nix { inherit pkgs user; })
     # Setup SSH Keys
-    (import ./ssh.nix { inherit lib userInfo; })
+    (import ./ssh.nix { inherit lib config userInfo; })
     # Configures which files & directories to persist for this user
     (import ./persist.nix { inherit lib user config; })
   ];
