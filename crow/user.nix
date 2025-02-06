@@ -1,6 +1,5 @@
 { pkgs, user, ... }:
 {
-  users.mutableUsers = false;
   users.users."${user.name}" = {
     uid = 1000;
     description = "Social, intelligent member of the Corvidae family";
