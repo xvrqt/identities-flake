@@ -1,6 +1,6 @@
 let
-  userInfo = import ../users.nix;
-  crow = userInfo.crow.agenix.publicKey;
+  crow = publicKeys.users.crow;
+  publicKeys = (builtins.getFlake "github:xvrqt/secrets-flake").publicKeys;
 in
 {
   # Crow's private SSH key, only accessible to Crow
