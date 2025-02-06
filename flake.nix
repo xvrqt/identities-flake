@@ -33,7 +33,7 @@
             # For this to work, users should not be mutable
             users.mutableUsers = false;
             # Login the default user
-            services.getty.autoLoginUser = config.identities.autoLogin;
+            services.getty.autologinUser = config.identities.autoLogin;
           };
         };
         # List of user configurations 
