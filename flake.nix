@@ -1,6 +1,6 @@
 {
   inputs = {
-    secrets.url = "/home/crow/dev/secrets-flake";
+    secrets.url = "github:xvrqt/secrets-flake";
   };
 
   outputs = { secrets, ... }:
