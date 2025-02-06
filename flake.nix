@@ -1,7 +1,5 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    # secrets.url = "github:xvrqt/secrets-flake";
     secrets.url = "/home/crow/dev/secrets-flake";
   };
 
@@ -12,7 +10,7 @@
     {
       # If other flakes want to use this as an input, for coherency
       inherit userInfo;
-      nixosModules = rec {
+      nixosModules = {
         # This module is always required, and then import individual users
         default = {
           imports = [
