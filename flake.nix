@@ -1,8 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    # agenix.url = "github:ryantm/agenix";
-    secrets.url = "github:xvrqt/secrets-flake";
+    # secrets.url = "github:xvrqt/secrets-flake";
+    secrets.url = "/home/crow/dev/secrets-flake";
   };
 
   outputs = { secrets, ... }:
