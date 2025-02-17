@@ -44,6 +44,8 @@
             ];
           };
         };
+        # For other Flakes that might need user details
+inherit userInfo;
       };
     };
 }
