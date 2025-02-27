@@ -8,7 +8,7 @@
     linger = true;
     # Enable 'sudo' for the user
     # Add the groups that are used by the 'arr' stack for convenience
-    extraGroups = [ "wheel" "pirates" "media-players" ];
+    extraGroups = [ "wheel" "pirates" "media-players" "dialout" ];
     # i.e. is *not* a daemon wearing human skin
     isNormalUser = true;
 
