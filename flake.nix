@@ -1,6 +1,6 @@
 {
   inputs = {
-    secrets.url = "github:xvrqt/secrets-flake";
+    secrets.url = "git+https://git.irlqt.net/crow/secrets-flake";
   };
 
   outputs = { secrets, ... }:
@@ -45,7 +45,7 @@
           };
         };
         # For other Flakes that might need user details
-inherit userInfo;
+        inherit userInfo;
       };
     };
 }

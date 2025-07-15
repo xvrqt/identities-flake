@@ -92,17 +92,17 @@
         "agenix": "agenix"
       },
       "locked": {
-        "lastModified": 1738866188,
-        "narHash": "sha256-E8m2QznNQKYf2p8VCDvDKAIoqSExzCvsO071/BDrNGQ=",
-        "owner": "xvrqt",
-        "repo": "secrets-flake",
-        "rev": "2ce07d0342bca6d76f5317882692034c2feb8397",
-        "type": "github"
+        "lastModified": 1752533854,
+        "narHash": "sha256-pVg3xHku/9ViRT8cDHUrYt2otTJHaJmeFjAFnp1ep/k=",
+        "ref": "refs/heads/master",
+        "rev": "f6200cdfc69f56d15dad63280a24f525040a622c",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/secrets-flake"
       },
       "original": {
-        "owner": "xvrqt",
-        "repo": "secrets-flake",
-        "type": "github"
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/secrets-flake"
       }
     },
     "systems": {
