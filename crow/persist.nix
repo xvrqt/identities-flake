@@ -11,6 +11,7 @@ in
     directories = [
       "dev"
       "docs"
+      "media"
       "projects"
       "downloads"
       # TODO: Include this with the web bundle ?
