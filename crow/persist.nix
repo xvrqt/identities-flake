@@ -13,8 +13,6 @@ in
       "docs"
       "projects"
       "downloads"
-      # TODO: Remove this once the key/flake is stable
-      "Development"
       # TODO: Include this with the web bundle ?
       # Or check if installed ?
       ".librewolf"
