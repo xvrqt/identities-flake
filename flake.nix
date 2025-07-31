@@ -1,23 +1,24 @@
 {
   inputs = {
     secrets.url = "git+https://git.irlqt.net/crow/secrets-flake";
+    networking.url = "git+https://git.irlqt.net/crow/wireguard-flake";
   };
 
-  outputs = { secrets, ... }:
+  outputs = { secrets, networking, ... }:
     let
       userInfo = import ./users.nix;
     in
     {
       # If other flakes want to use this as an input, for coherency
       inherit userInfo;
-      nixosModules = {
+      nixosModules = rec {
         # This module is always required, and then import individual users
-        default = { lib, config, ... }: {
+        default = { lib, name, config, machines, ... }: {
           imports = [
             # Import a preconfigure Agenix
             secrets.nixosModules.default
             # Enable SSH and configure it with sane defaults
-            (import ./ssh.nix { inherit userInfo; })
+            (import ./ssh.nix { inherit lib name config machines userInfo; })
           ];
           options = {
             identities = {
@@ -38,11 +39,17 @@
         };
         # List of user configurations 
         users = {
-          crow = { lib, pkgs, config, ... }: {
-            imports = [
-              (import ./crow { inherit lib pkgs config secrets userInfo; })
-            ];
-          };
+          crow = { lib, pkgs, config, ... }:
+            let
+              name = "crow";
+              machines = networking.config.machines;
+            in
+            {
+              imports = [
+                (default { inherit lib name config machines; })
+                (import ./crow { inherit lib pkgs config userInfo; })
+              ];
+            };
         };
         # For other Flakes that might need user details
         inherit userInfo;
