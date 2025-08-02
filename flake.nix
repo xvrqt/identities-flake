@@ -7,6 +7,7 @@
   outputs = { secrets, networking, ... }:
     let
       userInfo = import ./users.nix;
+      machines = networking.config.machines;
     in
     {
       # If other flakes want to use this as an input, for coherency
@@ -42,7 +43,6 @@
           crow = { lib, pkgs, config, ... }:
             let
               name = "crow";
-              machines = networking.config.machines;
             in
             {
               imports = [
