@@ -26,7 +26,7 @@
               impermanence = lib.mkOption {
                 type = lib.types.bool;
                 default = true;
-                description = "If the user should have impermanence set up for them."
+                description = "If the user should have impermanence set up for them.";
               };
               autoLogin = lib.mkOption
                 {
