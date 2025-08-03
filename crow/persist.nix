@@ -7,7 +7,7 @@ let
 in
 if cfgCheck then
 {
-  environment = {
+  config.environment = {
     persistence."/persist".users."${user.name}" =  {
     directories = [
       "dev"
