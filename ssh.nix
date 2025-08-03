@@ -30,7 +30,7 @@ let
 
       # Add in an entry to use Git
       # TODO make this dependent on the Git service
-      git = generateSSHConfigEntry { hostName = "forgejo"; ip = machines.archive.ip.v4.wg; inherit userName; };
+      git = generateSSHConfigEntry { hostName = "forgejo"; ip = machines.archive.ip.v4.wg; userName = "forgejo"; };
       with_git = entries ++ [ git ];
     in
     # Glue the strings together
