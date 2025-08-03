@@ -2,12 +2,12 @@
 let
   # If this identity is enabled
   identityEnabled = config.identities.${user.name}.enable;
-  persistCheck = builtins.hasAttr config.environment "persistence";
+  persistCheck = config.identities.impermanence;
   cfgCheck = persistCheck && identityEnabled;
 in
 if cfgCheck then
 {
-  config.environment = {
+  environment = {
     persistence."/persist".users."${user.name}" =  {
     directories = [
       "dev"
