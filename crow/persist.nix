@@ -2,7 +2,7 @@
 let
   # If this identity is enabled
   identityEnabled = config.identities.${user.name}.enable;
-  persistCheck = (config.environment.persistence.enable == true);
+  persistCheck =config.environment?persistence && config.environment.persistence?"/persist" && config.environment.persistence."/persist"?enable && (config.environment.persistence."/persist".enable == true);
   cfgCheck = persistCheck && identityEnabled;
 in
 if cfgCheck then
