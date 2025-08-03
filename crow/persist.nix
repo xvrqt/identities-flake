@@ -7,7 +7,8 @@ let
 in
 {
   # TODO: Make the '/persist' part of the path a parameter
-  environment.persistence."/persist".users."${user.name}" = lib.mkIf cfgCheck {
+  environment = lib.mkIf cfgCheck {
+    persistence."/persist".users."${user.name}" =  {
     directories = [
       "dev"
       "docs"
@@ -35,5 +36,6 @@ in
     files = [
       ".config/hyfetch.json"
     ];
+  };
   };
 }
