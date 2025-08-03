@@ -5,9 +5,9 @@ let
   persistCheck = config.environment?persistence;
   cfgCheck = persistCheck && identityEnabled;
 in
+if cfgCheck then
 {
-  # TODO: Make the '/persist' part of the path a parameter
-  environment = lib.mkIf cfgCheck {
+  environment = {
     persistence."/persist".users."${user.name}" =  {
     directories = [
       "dev"
@@ -38,4 +38,4 @@ in
     ];
   };
   };
-}
+} else {}
