@@ -6,7 +6,8 @@ let
   cfgCheck = persistCheck && identityEnabled;
 in
 {
-  environment.persistence."/persist".users."${user.name}" = lib.mkIf cfgCheck {
+  environment = lib.mkIf cfgCheck { 
+    persistence."/persist".users."${user.name}" = {
     directories = [
       "dev"
       "docs"
@@ -34,5 +35,6 @@ in
     files = [
       ".config/hyfetch.json"
     ];
+  };
   };
 }
