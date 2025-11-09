@@ -139,11 +139,11 @@
         "secrets": "secrets"
       },
       "locked": {
-        "lastModified": 1753817838,
-        "narHash": "sha256-GAAgNjYCHYcKUQk2PpPYvySue2ZqGvQGdT0Z45lUxKQ=",
+        "lastModified": 1754176606,
+        "narHash": "sha256-mPxGQVRcqKzicig615ZHaohcL4QF/PtQOn0KT3Hyx9Y=",
         "ref": "refs/heads/master",
-        "rev": "bed2026eceee059cc4f0289febaf466c2b72a5e4",
-        "revCount": 142,
+        "rev": "8f0ecc66054f843120a53e918dc48ce602dddf13",
+        "revCount": 144,
         "type": "git",
         "url": "https://git.irlqt.net/crow/wireguard-flake"
       },
