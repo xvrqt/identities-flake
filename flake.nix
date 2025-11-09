@@ -23,17 +23,11 @@
           ];
           options = {
             identities = {
-              impermanence = lib.mkOption {
-                type = lib.types.bool;
-                default = true;
-                description = "If the user should have impermanence set up for them.";
+              autoLogin = lib.mkOption {
+                type = lib.types.enum [ "crow" ];
+                default = "crow";
+                description = "Which user should be autologged in. Leave null to disable autologin";
               };
-              autoLogin = lib.mkOption
-                {
-                  type = lib.types.enum [ "crow" ];
-                  default = "crow";
-                  description = "Which user should be autologged in. Leave null to disable autologin";
-                };
             };
           };
           config = {
