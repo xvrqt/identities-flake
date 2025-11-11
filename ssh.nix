@@ -20,7 +20,7 @@ let
         ({ name, value }: {
           inherit userName;
           hostName = name;
-          ip = value.ip.v4.tailnet;
+          ip = value.ip.v4.wg;
         })
         (lib.attrsToList machines);
       # Generate an SSH Config entry for each machine
